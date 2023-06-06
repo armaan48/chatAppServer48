@@ -30,7 +30,7 @@ io.on('connection', function (socket) {
         socket.to(data.room).emit("recieve-message" , data);
     });
     socket.on('disconnect', function () {
-        console.log('user ' + username + '  disconnected');
+        console.log('user ' + socket.id + '  disconnected');
 
     });
 
